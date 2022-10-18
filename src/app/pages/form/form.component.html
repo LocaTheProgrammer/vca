@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <app-formazione-form [(ngModel)]="user"></app-formazione-form>
+        </div>
+    </div>
+
+    <div class="row wrapper">
+        <div class="col d-flex justify-content-center">
+            user: {{user | json}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="containter">
+    <div class="row mt-5">
+        <div class="col d-flex justify-content-center">
+            <app-search [list]="userList" objProperty="name" [(ngModel)]="userSelected"></app-search>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            hai scelto {{ userSelected | json }} - ext
+        </div>
+    </div>
+</div>

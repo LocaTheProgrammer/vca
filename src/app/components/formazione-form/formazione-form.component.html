@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col d-flex justify-content-center">
+        <button (click)="addLine()" class="btn btn-warning">
+            aggiungi
+        </button>
+    </div>
+
+    <div class="col d-flex justify-content-center">
+        <button (click)="export()" class="btn btn-warning">
+            export
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <app-user-form [(ngModel)]="userVal">
+        </app-user-form>
+    </div>
+</div>
+<div class="row" *ngFor="let item of userList">
+    <div class="col">
+        <app-user-form [(ngModel)]="userVal">
+        </app-user-form>
+    </div>
+</div>

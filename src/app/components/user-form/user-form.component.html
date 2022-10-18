@@ -1,0 +1,19 @@
+<div class="row mt-5">
+    <div class="col d-flex justify-content-center">
+        <app-custom-input [(ngModel)]="name" [placeholder]="name" type="text"></app-custom-input>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <app-custom-input [(ngModel)]="surname" [placeholder]="surname" type="text">
+        </app-custom-input>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <app-custom-input [(ngModel)]="age" [placeholder]="age" type="number"></app-custom-input>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col d-flex justify-content-center">
+        <button class="btn btn-success" (click)="saveUser()">
+            save
+        </button>
+    </div>
+</div>

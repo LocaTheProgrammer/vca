@@ -1,0 +1,8 @@
+<div class="wrapper mb-5">
+  choose a {{ objProperty }} <br>
+  <select [(ngModel)]="userSelected">
+    <option *ngFor="let item of list" [value]="item | json">
+      {{ item[objProperty] }}
+    </option>
+  </select>
+</div>
