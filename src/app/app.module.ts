@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -13,10 +13,13 @@ import { SelectComponent } from './pages/select/select.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormComponent } from './pages/form/form.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { DynamicFormPageComponent } from './pages/dynamic-form-page/dynamic-form-page.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule,
+    ReactiveFormsModule],
   declarations: [
     AppComponent,
     CustomInputComponent,
@@ -27,6 +30,8 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     SelectComponent,
     FormComponent,
     UserFormComponent,
+    DynamicFormPageComponent,
+    DynamicFormComponent,
   ],
   bootstrap: [AppComponent],
 })
