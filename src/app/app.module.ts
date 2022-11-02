@@ -15,6 +15,9 @@ import { FormComponent } from './pages/form/form.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { DynamicFormPageComponent } from './pages/dynamic-form-page/dynamic-form-page.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
+import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
+import { NamePipe } from './pipe/name.pipe';
+import { DynamicTablePageComponent } from './pages/dynamic-table-page/dynamic-table-page.component';
 
 
 @NgModule({
@@ -22,6 +25,7 @@ import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.com
     ReactiveFormsModule],
   declarations: [
     AppComponent,
+    NamePipe,
     CustomInputComponent,
     SearchComponent,
     FormazioneFormComponent,
@@ -32,6 +36,8 @@ import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.com
     UserFormComponent,
     DynamicFormPageComponent,
     DynamicFormComponent,
+    DynamicTableComponent,
+    DynamicTablePageComponent,
   ],
   bootstrap: [AppComponent],
 })

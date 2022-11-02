@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class DynamicInput {\n  constructor(valueType, inputValue, inputValueType) {\n    this.valueType = valueType;\n    this.inputValue = inputValue;\n    this.inputValueType = inputValueType;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

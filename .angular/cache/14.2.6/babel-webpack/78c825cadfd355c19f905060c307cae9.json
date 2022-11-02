@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { ItemBaseDF } from \"./ItemBaseDF\";\nexport class TextInputDF extends ItemBaseDF {\n  constructor() {\n    super(...arguments);\n    this.controlType = 'textbox';\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

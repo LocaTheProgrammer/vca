@@ -18,16 +18,13 @@ export class CustomInputComponent implements OnInit, ControlValueAccessor {
   @Input() placeholder: string
   @Input() type: string
   @Input() valueInput: string = ''
+  @Input() label: string = ''
+  @Input() disabledCondition: boolean
 
-  constructor() { }
-  ngOnInit(): void {
+  ngOnInit() {
     if (this.valueInput != '') {
       this.inputValue = this.valueInput
     }
-  }
-
-  setDisabledState?(isDisabled: boolean): void {
-    throw new Error('Method not implemented.');
   }
 
   onChange: any = () => { };
