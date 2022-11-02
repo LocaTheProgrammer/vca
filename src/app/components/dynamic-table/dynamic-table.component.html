@@ -18,13 +18,22 @@
 
 
     <div class="row" *ngIf="isDynamicInput">
+
         <div class="col d-flex justify-content-center" *ngFor="let item of dataList; let i = index">
-            <button *ngIf="!isVisibleArray[i] && item?.valueType != 'output'" (click)="show(i)">edit</button>
+            <span *ngIf="!isVisibleArray[i] && item?.valueType != 'output'">
+                <button (click)="show(i)">edit</button>{{inputValue[i]}}
+            </span>
             <button *ngIf="isVisibleArray[i] && item?.valueType != 'output'" (click)="hide(i)">hide</button>
-            <app-custom-input *ngIf="isVisibleArray[i] || item?.valueType == 'output'" [(ngModel)]="inputValue[i]"
-                [type]="item?.inputValueType" [valueInput]="item?.inputValue" [placeholder]="item?.inputValue"
-                [disabledCondition]="item?.valueType == 'output'" [label]="item?.label">
+            <app-custom-input
+                *ngIf="(isVisibleArray[i] || item[dataListHeaders[0]] == 'output') && item[dataListHeaders[2]]!='select'"
+                [(ngModel)]="inputValue[i]" [type]="item[dataListHeaders[2]]" [valueInput]="item[dataListHeaders[1]]"
+                [placeholder]="item[dataListHeaders[1]]" [disabledCondition]="item[dataListHeaders[0]] == 'output'"
+                [label]="item[dataListHeaders[3]]">
             </app-custom-input>
+
+            <select [(ngModel)]="inputValue[i]" *ngIf="item[dataListHeaders[2]]=='select' && isVisibleArray[i]">
+                <option *ngFor="let opt of item[dataListHeaders[1]]" [value]="opt">{{opt}}</option>
+            </select>
         </div>
 
         <div class="row mt-5">

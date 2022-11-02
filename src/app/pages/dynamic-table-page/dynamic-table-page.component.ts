@@ -12,6 +12,7 @@ export class DynamicTablePageComponent {
     new DynamicInput('input', '', 'text', 'label text: '),
     new DynamicInput('input', '', 'number', 'label number: '),
     new DynamicInput('input', '', 'date', 'label date: '),
+    new DynamicInput('input', ['opt1', 'opt2', 'opt3'], 'select', 'label select: '),
     new DynamicInput('output', 'pippo output', 'text', 'label text disabled: ')
   ]
   headers: string[] = ["value"]

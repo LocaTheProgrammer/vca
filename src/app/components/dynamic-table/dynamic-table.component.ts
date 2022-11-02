@@ -25,10 +25,10 @@ export class DynamicTableComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.dataListHeaders = Object.keys(this.dataList)
     if ((this.dataList.length > 0) && (this.dataList[0] instanceof DynamicInput)) {
-      debugger
-      console.log("is dyn true")
+      this.dataListHeaders = Object.keys(this.dataList[0])
+      console.log(this.dataList)
+      console.log(this.dataListHeaders)
       for (let i = 0; i < this.dataListHeaders.length; i++) {
         this.isVisibleArray[i] = false
       }
